@@ -3,12 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   records: 0,
   ops: 0,
-  sliderOptions: ["Monthly", "Annually"],
-  sliderIndex:1,
-
-  monthlyOption: Ember.computed('sliderIndex', function(){
-    return this.get('sliderIndex') == 0;
-  }),
 
   eligible: Ember.computed('records', 'ops', function() {
     return this.get('records') > 500000 ||  this.get('ops') > 1500000

@@ -3,13 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   records: 0,
   ops: 0,
-  sliderOptions: ["Monthly", "Annually"],
-  sliderIndex:1,
-
-  monthlyOption: Ember.computed('sliderIndex', function(){
-    return this.get('sliderIndex') == 0;
-  }),
-
+  
   eligible: Ember.computed('records', 'ops', function() {
     return this.get('records') > 500000 ||  this.get('ops') > 1500000
   }),
@@ -42,7 +36,7 @@ export default Ember.Component.extend({
     if(tranchesOverMin < 0){
       return 0;
     }
-    return .25 + (tranchesOverMin*0.00103);
+    return .15 + (tranchesOverMin*0.00103);
   }),
 
   opsDiscount: Ember.computed('ops', function(){
@@ -50,7 +44,7 @@ export default Ember.Component.extend({
     if(tranchesOverMin < 0){
       return 0;
     }
-    return .25 + (tranchesOverMin*0.00025);
+    return .15 + (tranchesOverMin*0.00025);
   }),
 
   recordCostPerTranche: Ember.computed('records', function(){

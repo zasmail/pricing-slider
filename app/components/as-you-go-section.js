@@ -20,11 +20,13 @@ export default Ember.Component.extend({
 
   costRecords: Ember.computed('ops', 'records', function(){
     // return (this.get('records')/20000 * 10*(1-this.get('recordsDiscount'))) + (this.get('ops')/50000 * 5);
-    return (this.get('records')/20000 * 10*(1-this.get('recordsDiscount')));
+    // return (this.get('records')/20000 * 10*(1-this.get('recordsDiscount')));
+    return (this.get('records')/20000 * 10);
   }),
   costOps: Ember.computed('ops', 'records', function(){
     // return (this.get('records')/20000 * 10*(1-this.get('recordsDiscount'))) + (this.get('ops')/50000 * 5);
-    return (this.get('ops')/50000 * 5*(1-this.get('opsDiscount')));
+    // return (this.get('ops')/50000 * 5*(1-this.get('opsDiscount')));
+    return (this.get('ops')/50000 * 5);
   }),
 
   recordsDiscount: Ember.computed('records', function(){
