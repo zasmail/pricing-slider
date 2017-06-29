@@ -1,0 +1,26 @@
+<div class="info-section grid-x grid-margin-x">
+  <div class="small-12 cell title"><h3>Annual Commitment</h3></div>
+  <div class="small-12 cell subtitle"><h4>Paid monthly or annually</h4></div>
+  <div class="small-12 cell subtitle"><h4>Overages billed at discounted rate</h4></div>
+
+  <div class="{{if eligible 'grid-x side-bar' 'grid-x side-bar ineligible'}}">
+    <div class="small-6 cell record-section">
+      <div class="small-12 medium-2 cell">{{displayRecords}} Records</div>
+      <div class="small-12 medium-2 cell">{{displayOps}} Operations</div>
+      <div class="small-12 medium-2 cell">{{recordCostPerTrancheDisplay}} per 20K Records</div>
+      <div class="small-12 medium-2 cell">{{opsCostPerTrancheDisplay}} per 50k Operations</div>
+    </div>
+    <div class="small-6 cell record-section">
+      <!-- <div class="small-12 medium-2 cell">{{costRecords}}</div>
+      <div class="small-12 medium-2 cell">{{costOps}}</div> -->
+      <div class="small-12 medium-2 cell">{{totalCostDisplay}}/month</div>
+    </div>
+  </div>
+
+  <!-- <div class="small-12 medium-2 cell">  {{recordsDiscount}}</div> -->
+  <!-- <div class="small-12 medium-2 cell">  {{costRecords}}</div> -->
+  <!-- <div class="small-12 medium-2 cell">  {{opsDiscount}}</div> -->
+  <!-- <div class="small-12 medium-2 cell">  {{costOps}}</div> -->
+
+
+</div>

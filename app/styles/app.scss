@@ -1,0 +1,92 @@
+@import "settings";
+@import 'foundation-sites/foundation';
+@include foundation-everything;
+
+body{
+  background: #f8faff;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  color: #3e396b;
+  min-height: 860px;
+  background-color: white;
+  background-image: url(https://www.algolia.com/static_assets/images/svg/hero-product-background-fbf6afbc.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100%;
+}
+.backup-color{
+  color: #8994c6;
+}
+h1{
+  font-size: 40px;
+}
+h4{
+  color: #8994c6;
+  font-size: 1.2625rem;
+  margin-bottom: 0;
+}
+.push-down{
+  margin-top: 50px;
+}
+.main-container{
+  padding: 30px;
+  margin-top: 50px;
+  margin: auto;
+  max-width: 1280px;
+  min-height: 300px;
+  background-color: white;
+  box-shadow: 0 10px 40px 0 rgba(112,128,175,0.38), 0 8px 0 0 rgba(103,117,161,0.06);
+  border-radius: 6px;
+  .center-text{
+    text-align: center;
+    width: 100%;
+  }
+  .side-bar{
+    width: 100%;
+  }
+  .ineligible{
+    opacity: .2;
+
+  }
+  .info-section{
+    padding-left: 30px;
+    padding-right: 30px;
+    .title{
+      text-align: center;
+    }
+    .subtitle{
+      text-align: center;
+    }
+    .record-section{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .slider-section{
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    .small-input{
+      margin: 0;
+      border: none;
+      box-shadow: none;
+      border-bottom: 1px solid;
+      color: #00aeff;
+    }
+    .small-input:focus{
+      border-bottom: 1px solid #00aeff;
+      color: #3369e7;
+    }
+    .slider{
+      margin: auto;
+      vertical-align: middle;
+      background-color: transparent;
+      .slider-handle{
+        margin-top: 0px;
+        background-image: linear-gradient(80deg, #00aeff, #3369e7);
+      }
+    }
+    .labels{
+      font-size: 12px;
+    }
+  }
+}

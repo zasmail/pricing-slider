@@ -1,0 +1,51 @@
+<div class="slider-section grid-x grid-margin-x">
+  <!-- {{displayRecords}} -->
+  <p class="small-12 medium-2 cell">Records</p>
+  {{input-clicker input=records iden="input-helper-records" class="medium-2 cell" maxVal=10000000 increment=20000}}
+  {{ui-slider
+     value=records
+     min=20000
+     max=10000000
+     step=20000
+     orientation='horizontal'
+     tooltip='hide'
+     disabled=false
+     handle='round'
+     reversed=false
+     tooltipPosition='bottom'
+     focus=false
+     naturalArrowKeys=false
+     immediateResponse=false
+     class="medium-8 cell" }}
+   <div class="small-12 medium-4 cell"></div>
+
+   <div class="small-12 medium-8 cell labels">
+     <p class="float-left">20,000</p>
+     <p class="float-right">10,000,000</p>
+   </div>
+</div>
+<div class="slider-section grid-x grid-margin-x">
+  <!-- {{displayOps}} -->
+  <p class="small-12 medium-2 cell">Operations</p>
+  {{input-clicker input=ops iden="input-helper-ops" class="medium-2 cell" maxVal=100000000 increment=50000}}
+  {{ui-slider
+       value=ops
+       min=50000
+       max=100000000
+       step=50000
+       orientation='horizontal'
+       tooltip='hide'
+       disabled=false
+       handle='round'
+       reversed=false
+       tooltipPosition='bottom'
+       focus=false
+       naturalArrowKeys=false
+       immediateResponse=false
+       class="medium-8 cell" }}
+     <div class="small-12 medium-4 cell"></div>
+     <div class="small-12 medium-8 cell labels">
+       <p class="float-left">50,000</p>
+       <p class="float-right">100,000,000</p>
+     </div>
+</div>
