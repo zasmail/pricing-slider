@@ -46,7 +46,7 @@ export default Ember.Component.extend({
   }),
 
   opsDiscount: Ember.computed('ops', function(){
-    var tranchesOverMin = ((this.get('ops') - 500000)/50000) - 1;
+    var tranchesOverMin = ((this.get('ops') - 1000000)/1000000) - 1;
     if(tranchesOverMin < 0){
       return 0;
     }
