@@ -5,9 +5,22 @@ export default Ember.Component.extend({
   ops: 0,
   sliderOptions: ["Monthly", "Annually"],
   sliderIndex:1,
+  minDiscountThresholdRecords: 500000,
+  minDiscountThresholdOps: 1000000,
+  recordsTranche: 50000,
+  opsTranche: 100000,
+
+  recordsDiscountMultiplier: 0.00263,
+  opsDiscountMultiplier: 0.00053,
+  recordsTrancheCost: 25,
+  opsTrancheCost: 10,
 
   monthlyOption: Ember.computed('sliderIndex', function(){
     return this.get('sliderIndex') == 0;
+  }),
+
+  baseDiscount: Ember.computed('monthlyOption', function(){
+    return this.get('monthlyOption') ? .15 : .25;
   }),
 
   eligible: Ember.computed('records', 'ops', function() {
