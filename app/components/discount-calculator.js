@@ -42,10 +42,10 @@ export default Ember.Component.extend({
     return this.get('baseDiscount') + (tranchesOverMin*this.get('opsDiscountMultiplier'));
   }),
 
-  recordCostPerTranche: Ember.computed('recordsTrancheCost', 'baseDiscount', function(){
+  recordCostPerTranche: Ember.computed('recordsTrancheCost', 'baseDiscount', 'records', 'ops', function(){
     return this.get('recordsTrancheCost')*(1-this.get('recordsDiscount'));
   }),
-  opsCostPerTranche: Ember.computed('opsTrancheCost', 'baseDiscount', function(){
+  opsCostPerTranche: Ember.computed('opsTrancheCost', 'baseDiscount', 'records', 'ops', function(){
     return this.get('opsTrancheCost')*(1-this.get('opsDiscount'));
   }),
 
@@ -56,7 +56,7 @@ export default Ember.Component.extend({
     return (this.get('ops')/this.get('opsTranche') * this.get('opsTrancheCost')*(1-this.get('opsDiscount')));
   }),
 
-  totalCost: Ember.computed('costRecords', 'costOps', function(){
+  totalCost: Ember.computed('costRecords', 'costOps', 'records', 'ops', function(){
     return this.get('costOps') + this.get('costRecords');
   }),
   totalCostDisplay: Ember.computed('totalCost', function(){
