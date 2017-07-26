@@ -13,6 +13,7 @@ export default Ember.Component.extend({
   recordsTrancheCost: 0,
   opsTrancheCost: 0,
   monthlyOption: false,
+  
   annualOption: Ember.computed.not('monthlyOption'),
 
   eligible: Ember.computed('records', 'ops', function() {
